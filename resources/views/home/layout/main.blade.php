@@ -50,7 +50,7 @@
                     </div>
                     <div class="col-lg-8 align-self-baseline">
                         <p class="text-white-75 mb-5">المساعدة في كافة خدمات البحث العلمي للباحثين وطلاب الجامعات في مختلف التخصصات</p>
-                        <a class="btn btn-primary btn-xl" href="#about">إبدأ الأن</a>
+                        <a class="btn btn-primary btn-xl" href="#start">إبدأ الأن</a>
                     </div>
                 </div>
             </div>

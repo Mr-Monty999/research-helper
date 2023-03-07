@@ -71,9 +71,15 @@
 #mainNav.navbar-shrink .navbar-brand {
     color: white;
 }
+#mainNav.navbar-shrink .navbar-brand:hover {
+    color: #2b505e !important;
+}
 
 #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link {
     color: white;
+}
+#mainNav.navbar-shrink .navbar-nav .nav-item .nav-link:hover {
+    color: #2b505e !important;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active {
