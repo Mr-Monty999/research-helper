@@ -1,1 +1,1 @@
-@extends('home.layout.main')
+@extends('home.layout.layout2')

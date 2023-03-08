@@ -65,7 +65,7 @@
     font-family: "Cairo", sans-serif !important;
 }
 #mainNav.navbar-shrink {
-    background-color: var(--bs-primary);
+    background-color: transparent;
 }
 
 #mainNav.navbar-shrink .navbar-brand {
@@ -97,4 +97,23 @@ hr.divider {
 }
 input:hover {
     border-color: var(--bs-primary) !important;
+}
+
+.head-btn {
+    border-radius: 30%;
+    text-decoration: none;
+    padding: 10px;
+    border: none;
+    font-size: 15px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+.nav-link:hover {
+    border-color: var(--bs-primary) !important;
+}
+
+@media only screen and (max-width: 400px) {
+    .head-btn {
+        font-size: 9px;
+    }
 }
