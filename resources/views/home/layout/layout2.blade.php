@@ -56,11 +56,11 @@
         </header>
 
         <!-- Footer-->
-        <footer class="bg-light py-5">
-            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; الشركة العالمية للخدمات العلمية</div></div>
+        {{-- <footer class="bg-light py-5">
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; الجودة العالمية للخدمات البحثية</div></div>
         </footer>
         <br>
-        <br>
+        <br>--}}
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- SimpleLightbox plugin JS-->
