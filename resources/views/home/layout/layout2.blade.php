@@ -46,9 +46,9 @@
                 {{-- <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button> --}}
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul style="width: 100%;" class="navbar-nav ms-auto my-2 my-lg-0 justify-content-between justify-content-md-evenly">
-                        <li class="nav-item"><a class="btn btn-primary head-btn" href="#start">إبدأ الأن</a></li>
-                        <li class="nav-item"><a class="btn btn-primary head-btn" href="#about">من نحن؟</a></li>
-                        <li class="nav-item"><a class="btn btn-primary head-btn" href="#contact">تواصل معنا</a></li>
+                        <li class="nav-item"><a class="btn head-btn" href="#start">إبدأ الأن</a></li>
+                        <li class="nav-item"><a class="btn head-btn" href="#about">من نحن؟</a></li>
+                        <li class="nav-item"><a class="btn head-btn" href="#contact">تواصل معنا</a></li>
 
                     </ul>
                 </div>
