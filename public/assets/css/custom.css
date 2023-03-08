@@ -111,7 +111,7 @@ input:hover {
 .nav-link:hover {
     border-color: var(--bs-primary) !important;
 }
-body {
+/* body {
     padding-top: 10rem;
     padding-bottom: calc(10rem - 4.5rem);
     background: linear-gradient(
@@ -122,9 +122,9 @@ body {
         url("../../assets2/assets/img/bg-masthead.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    /* background-attachment: scroll; */
     background-size: cover;
-}
+} */
 
 @media only screen and (max-width: 400px) {
     .head-btn {
