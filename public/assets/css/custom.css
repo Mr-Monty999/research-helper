@@ -111,23 +111,30 @@ input:hover {
 .nav-link:hover {
     border-color: var(--bs-primary) !important;
 }
-/* body {
-    padding-top: 10rem;
+body {
     padding-bottom: calc(10rem - 4.5rem);
     background: linear-gradient(
             to bottom,
-            rgba(73, 60, 52, 0.8) 0%,
-            rgba(73, 77, 66, 0.8) 100%
+            rgba(0, 191, 255, 0.35) 0%,
+            rgb(0, 191, 255, 0.35) 100%
         ),
         url("../../assets2/assets/img/bg-masthead.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    /* background-attachment: scroll; */
+    background-attachment: fixed;
     background-size: cover;
+}
+/* header {
+    height: 100vh;
 } */
 
 @media only screen and (max-width: 400px) {
     .head-btn {
         font-size: 9px;
+    }
+}
+@media screen and (max-width: 992px) {
+    body {
+        padding-top: 10rem;
     }
 }
