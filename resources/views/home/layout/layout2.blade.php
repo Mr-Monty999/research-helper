@@ -25,7 +25,7 @@
     </head>
     <body id="page-top">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand navbar-light fixed-bottom py-3" id="mainNav">
+        <nav class="navbar navbar-expand fixed-bottom py-3" id="mainNav">
             <div class="container-fluid px-4 px-lg-5">
                 {{-- <a class="navbar-brand text-wrap" href="#page-top">الشركة العالمية للخدمات العلمية</a> --}}
                 {{-- <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button> --}}
