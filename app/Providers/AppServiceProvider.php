@@ -2,7 +2,11 @@
 
 namespace App\Providers;
 
+use App\Http\Livewire\Steps\CollegeStep;
+use App\Http\Livewire\Steps\EducationLevelStep;
+use App\Http\Livewire\WizardCheckoutComponent;
 use Illuminate\Support\ServiceProvider;
+use Livewire\Livewire;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +17,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
     }
 
     /**
@@ -23,6 +26,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Livewire::component("wizard-checkout-component", WizardCheckoutComponent::class);
+        Livewire::component("education-level-step", EducationLevelStep::class);
+        Livewire::component("college-step", CollegeStep::class);
     }
 }

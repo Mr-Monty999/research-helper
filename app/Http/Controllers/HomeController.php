@@ -12,4 +12,9 @@ class HomeController extends Controller
     {
         return view("home.index");
     }
+
+    public function startSteps()
+    {
+        return view("home.start-step");
+    }
 }

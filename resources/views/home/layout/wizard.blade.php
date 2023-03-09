@@ -20,13 +20,13 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     {{-- <link href="{{asset('assets2/css/styles.css')}}" rel="stylesheet" /> --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.rtl.min.css"
-        integrity="sha384-DOXMLfHhQkvFFp+rWTZwVlPVqdIhpDVYT9csOnHSgWQWPX0v5MCGtjCJbY6ERspU" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.rtl.min.css" <link
+        rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap"
         rel="stylesheet">
     <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet" />
+    @livewireStyles
 </head>
 
 <body id="page-top">
@@ -35,37 +35,7 @@
 
     </div>
 
-    <!-- Masthead-->
-    <header class="masthead">
-        <div class="container px-4 px-lg-5 h-100">
-            <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-                <div class="col-lg-8 align-self-end">
-                    <h1 class="text-black font-weight-bold head-title">الجودة العالمية للخدمات البحثية</h1>
-                </div>
-                <div class="col-lg-8 align-self-baseline">
-                    <p class="text-black mb-5" style="font-size:20px;font-weight: bold">نساعدك في كتابة بحثك بنفسك بكل
-                        إحترافية</p>
-                    {{-- <a class="btn btn-primary btn-xl" href="#start">إبدأ الأن</a> --}}
-                </div>
-            </div>
-        </div>
-        <nav class="navbar navbar-expand fixed-bottom py-3" id="mainNav">
-            <div class="container-fluid px-4 px-lg-5">
-                {{-- <a class="navbar-brand text-wrap" href="#page-top">الشركة العالمية للخدمات العلمية</a> --}}
-                {{-- <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button> --}}
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul style="width: 100%;"
-                        class="navbar-nav ms-auto my-2 my-lg-0 justify-content-between justify-content-md-evenly">
-                        <li class="nav-item"><a class="btn head-btn" href="{{ route('start.steps') }}">إبدأ الأن</a>
-                        </li>
-                        <li class="nav-item"><a class="btn head-btn" href="#about">من نحن؟</a></li>
-                        <li class="nav-item"><a class="btn head-btn" href="#contact">تواصل معنا</a></li>
-
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+    @yield('section')
 
     <!-- Footer-->
     {{-- <footer class="bg-light py-5">
@@ -84,6 +54,7 @@
     <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    @livewireScripts
 </body>
 
 </html>
