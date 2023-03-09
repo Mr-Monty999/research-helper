@@ -31,7 +31,7 @@
                     class="navbar-nav ms-auto my-2 my-lg-0 justify-content-between justify-content-md-evenly">
                     {{-- <li class="nav-item"><button class="btn head-btn" wire:click="nextStep">التالي</button></li> --}}
                     <li class="nav-item"><button class="btn head-btn" wire:click="previousStep">السابق</button></li>
-                    <li class="nav-item"><a class="btn head-btn" href="{{ route('home') }}">خروج</a></li>
+                    <li class="nav-item"><a class="btn head-btn" href="{{ route('home') }}">الرئيسية</a></li>
                 </ul>
             </div>
         </div>
