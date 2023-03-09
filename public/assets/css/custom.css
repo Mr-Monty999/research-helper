@@ -1,4 +1,4 @@
-:root {
+/* :root {
     --bs-blue: #0d6efd;
     --bs-indigo: #6610f2;
     --bs-purple: #6f42c1;
@@ -60,11 +60,11 @@
     --bs-body-line-height: 1.5;
     --bs-body-color: #212529;
     --bs-body-bg: #fff;
-}
+} */
 * {
-    font-family: "Cairo", sans-serif !important;
+    /* font-family: "Cairo", sans-serif !important; */
 }
-#mainNav.navbar-shrink {
+/* #mainNav.navbar-shrink {
     background-color: transparent;
 }
 
@@ -97,14 +97,16 @@ hr.divider {
 }
 input:hover {
     border-color: var(--bs-primary) !important;
+} */
+header {
+    padding-top: 10%;
 }
-
 .head-btn {
     border-radius: 30%;
     text-decoration: none;
     padding: 10px;
     border: none;
-    font-size: 15px;
+    font-size: 20px;
     margin-left: 10px;
     font-weight: bold;
     background-color: rgb(0, 204, 255);
@@ -113,30 +115,36 @@ input:hover {
 .nav-link:hover {
     border-color: var(--bs-primary) !important;
 }
-body {
-    padding-bottom: calc(10rem - 4.5rem);
+#background-image {
+    /* padding-bottom: calc(10rem - 4.5rem); */
     background: linear-gradient(
             to bottom,
             rgba(0, 102, 255, 0.35) 0%,
             rgb(0, 102, 255, 0.35) 100%
         ),
-        url("../../assets2/assets/img/bg-masthead.jpg");
+        url("../../assets2/assets/img/bg-masthead.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    opacity: 0.6;
+    /* background-color: red !important; */
 }
 /* header {
     height: 100vh;
 } */
-
+.head-title {
+    font-weight: bold;
+    font-size: 40px !important;
+}
 @media only screen and (max-width: 400px) {
     .head-btn {
-        font-size: 9px;
+        font-size: 12px;
     }
 }
 @media screen and (max-width: 992px) {
-    body {
-        padding-top: 10rem;
-    }
 }

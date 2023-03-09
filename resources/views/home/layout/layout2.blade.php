@@ -16,8 +16,8 @@
         <!-- SimpleLightbox plugin CSS-->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="{{asset('assets2/css/styles.css')}}" rel="stylesheet" />
-
+        {{-- <link href="{{asset('assets2/css/styles.css')}}" rel="stylesheet" /> --}}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
@@ -25,17 +25,20 @@
     </head>
     <body id="page-top">
         <!-- Navigation-->
+        <div id="background-image">
+
+        </div>
 
         <!-- Masthead-->
         <header class="masthead">
             <div class="container px-4 px-lg-5 h-100">
                 <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
                     <div class="col-lg-8 align-self-end">
-                        <h1 class="text-white font-weight-bold">الجودة العالمية للخدمات البحثية</h1>
-                        <hr class="divider" />
+                        <h1 class="text-black font-weight-bold head-title">الجودة العالمية للخدمات البحثية</h1>
+                        {{-- <hr class="divider" /> --}}
                     </div>
                     <div class="col-lg-8 align-self-baseline">
-                        <p class="text-white-75 mb-5">نساعدك في كتابة بحثك بنفسك بكل إحترافية</p>
+                        <p class="text-black mb-5" style="font-size:20px;font-weight: bold">نساعدك في كتابة بحثك بنفسك بكل إحترافية</p>
                         {{-- <a class="btn btn-primary btn-xl" href="#start">إبدأ الأن</a> --}}
                     </div>
                 </div>
