@@ -55,10 +55,10 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul style="width: 100%;"
                         class="navbar-nav ms-auto my-2 my-lg-0 justify-content-between justify-content-md-evenly">
-                        <li class="nav-item"><a class="btn head-btn" href="{{ route('start.steps') }}">إبدأ الأن</a>
+                        <li class="nav-item"><a class="head-btn" href="{{ route('start.steps') }}">إبدأ الأن</a>
                         </li>
-                        <li class="nav-item"><a class="btn head-btn" href="#about">من نحن؟</a></li>
-                        <li class="nav-item"><a class="btn head-btn" href="#contact">تواصل معنا</a></li>
+                        <li class="nav-item"><a class="head-btn" href="#about">من نحن؟</a></li>
+                        <li class="nav-item"><a class="head-btn" href="#contact">تواصل معنا</a></li>
 
                     </ul>
                 </div>
