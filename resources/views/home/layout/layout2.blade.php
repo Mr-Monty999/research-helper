@@ -42,7 +42,7 @@
                     <h1 class="text-black font-weight-bold head-title">الجودة العالمية للخدمات البحثية</h1>
                 </div>
                 <div class="col-lg-8 align-self-baseline">
-                    <p class="text-black mb-5" style="font-size:20px;font-weight: bold">نساعدك في كتابة بحثك بنفسك بكل
+                    <p class="text-black mb-5" style="font-size:20px;font-weight: bold">نساعدك في كتابة بحثك بكل
                         إحترافية</p>
                     {{-- <a class="btn btn-primary btn-xl" href="#start">إبدأ الأن</a> --}}
                 </div>
