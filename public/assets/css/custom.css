@@ -127,7 +127,8 @@ header {
     background-color: rgb(11, 118, 145) !important;
 }
 .sidebar-btn:hover,
-.head-btn:hover {
+.head-btn:hover,
+.selection-btn:hover {
     background-color: rgb(11, 118, 145);
 }
 .nav-link:hover {
@@ -161,6 +162,17 @@ header {
 .head-title {
     font-weight: bold;
     font-size: 40px !important;
+}
+.selection-btn {
+    border-radius: 10%;
+    text-decoration: none;
+    padding: 10px;
+    border: none;
+    font-size: 14px;
+    margin-left: 10px;
+    font-weight: bold;
+    background-color: rgb(12, 121, 194);
+    color: white;
 }
 @media only screen and (max-width: 400px) {
     .head-btn {
