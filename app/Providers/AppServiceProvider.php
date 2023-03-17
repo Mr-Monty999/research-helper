@@ -26,6 +26,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        require_once app_path("Helpers/Helper.php");
         Livewire::component("wizard-checkout-component", WizardCheckoutComponent::class);
         Livewire::component("education-level-step", EducationLevelStep::class);
         Livewire::component("college-step", CollegeStep::class);

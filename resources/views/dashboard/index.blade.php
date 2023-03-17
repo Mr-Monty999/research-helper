@@ -1,2 +1,3 @@
-@extends('dashboard.layout.dashboard')
-
+@extends('dashboard.layout.master')
+@section('content')
+@endsection
