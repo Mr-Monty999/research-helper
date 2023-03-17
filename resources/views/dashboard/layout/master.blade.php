@@ -386,16 +386,13 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span
-                                    class="mr-2 d-none d-lg-inline text-gray-600 small">{{ auth()->guard('admin')->user()->name }}</span>
-                                @if (auth()->guard('admin')->user()->image)
-                                    <img class="img-profile rounded-circle"
-                                        src="{{ asset('storage/' .auth()->guard('admin')->user()->image) }}"
-                                        alt="{{ trans('dashboard.Profile Image') }}">
-                                @else
-                                    <img class="img-profile rounded-circle"
-                                        src="{{ asset('dashboard/img/undraw_profile.svg') }}">
-                                @endif
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
+                                <img class="img-profile rounded-circle" src="{{ asset('storage/') }}"
+                                    alt="{{ trans('dashboard.Profile Image') }}">
+
+                                {{-- <img class="img-profile rounded-circle"
+                                    src="{{ asset('dashboard/img/undraw_profile.svg') }}"> --}}
+
 
                             </a>
                             <!-- Dropdown - User Information -->
