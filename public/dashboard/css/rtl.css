@@ -1,0 +1,16 @@
+:not(button, navbar, navbar *) {
+    direction: rtl !important;
+    text-align: right !important;
+}
+:not(i, img) {
+    font-family: "Cairo", sans-serif !important;
+}
+.sidebar .nav-item .collapse {
+    right: calc(6.5rem + 1.5rem / 2);
+}
+
+@media (min-width: 768px) {
+    .sidebar .nav-item .collapse {
+        right: auto;
+    }
+}

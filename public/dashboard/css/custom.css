@@ -1,0 +1,17 @@
+#accordionSidebar {
+    width: fit-content !important;
+}
+.nav-link {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+}
+.btn {
+    text-align: center !important;
+}
+
+@media (max-width: 767px) {
+    .sidebar.toggled {
+        overflow: unset;
+        display: none;
+    }
+}
