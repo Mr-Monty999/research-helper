@@ -8,9 +8,9 @@ use App\Http\Requests\StoreAdminRequest;
 use App\Http\Requests\UpdateProfileRequest;
 use App\Models\Admin;
 use App\Models\User;
+use Auth;
 use Gate;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
+use Hash;
 
 class AdminController extends Controller
 {
@@ -22,7 +22,6 @@ class AdminController extends Controller
     public function index()
     {
         $admins = Admin::paginate(10);
-
         return view("dashboard.admin.index", compact("admins"));
     }
 
@@ -69,7 +68,7 @@ class AdminController extends Controller
      */
     public function create()
     {
-        $this->authorize("create", auth()->guard("admin")->user());
+        // $this->authorize("create", auth()->guard("admin")->user());
 
         return view("dashboard.admin.create");
     }
@@ -82,7 +81,7 @@ class AdminController extends Controller
      */
     public function store(StoreAdminRequest $request)
     {
-        // $this->authorize("create", auth()->guard("admin")->user());
+        $this->authorize("create", auth()->guard("admin")->user());
         $data = $request->validated();
 
         $data["password"] = Hash::make($data["password"]);
@@ -120,7 +119,7 @@ class AdminController extends Controller
      */
     public function edit(Admin $admin)
     {
-        // $this->authorize("update", auth()->guard("admin")->user());
+        $this->authorize("update", auth()->guard("admin")->user());
 
         return view("dashboard.admin.edit", compact("admin"));
     }
@@ -134,7 +133,7 @@ class AdminController extends Controller
      */
     public function update(UpdateAdminRequest $request, Admin $admin)
     {
-        // $this->authorize("update", auth()->guard("admin")->user());
+        $this->authorize("update", auth()->guard("admin")->user());
 
         $data = $request->validated();
         unset($data["password_confirmation"]);
@@ -163,7 +162,7 @@ class AdminController extends Controller
      */
     public function destroy(Admin $admin)
     {
-        // $this->authorize("delete", auth()->guard("admin")->user());
+        $this->authorize("delete", auth()->guard("admin")->user());
 
         $admin->delete();
 

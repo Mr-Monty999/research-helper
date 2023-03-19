@@ -9,7 +9,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>{{ trans('dashboard.Afeia') }}</title>
+    <title>
+        الجودة العالمية للخدمات البحثية
+    </title>
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('dashboard/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
@@ -39,7 +41,8 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     {{-- <i class="fas fa-laugh-wink"></i> --}}
                 </div>
-                <div class="sidebar-brand-text mx-3">{{ trans('dashboard.Afeia') }}</sup></div>
+                <div class="sidebar-brand-text mx-3"> الجودة العالمية للخدمات البحثية
+                    </sup></div>
             </a>
 
             <!-- Divider -->
@@ -56,19 +59,6 @@
             {{-- <hr class="sidebar-divider"> --}}
 
 
-            <div class="sidebar-heading">
-                {{ trans('dashboard.Hospitals') }}
-            </div>
-            <li class="nav-item {{ isRequestMatchUrl(route('dashboard.index'), 'active') }}">
-                <a class="nav-link" href="{{ route('dashboard.index') }}">
-                    {{-- <i class="fas fa-fw fa-cog"></i> --}}
-                    <span>{{ trans('dashboard.dashboard List') }}</span></a>
-            </li>
-            <li class="nav-item {{ isRequestMatchUrl(route('dashboard.index'), 'active') }}">
-                <a class="nav-link" href="{{ route('dashboard.index') }}">
-                    {{-- <i class="fas fa-fw fa-cog"></i> --}}
-                    <span>{{ trans('dashboard.Create Hospital') }}</span></a>
-            </li>
 
             {{-- Admins --}}
             <div class="sidebar-heading">
@@ -435,7 +425,9 @@
                 <footer class="sticky-footer bg-white">
                     <div class="container my-auto">
                         <div class="copyright text-center my-auto">
-                            <span>Copyright &copy; Afeia 2023</span>
+                            <span>جميع الحقوق محفوظة &copy;
+                                الجودة العالمية للخدمات البحثية
+                                2023</span>
                         </div>
                     </div>
                 </footer>
