@@ -29,57 +29,55 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($levels as $index => $admin)
-                                @if (auth()->guard('admin')->id() != $admin->id)
-                                    <tr>
-                                        <td>{{ $index + 1 }}</td>
-                                        <td>{{ $admin->name }}</td>
-                                        <td>{{ $admin->description }}</td>
-                                        <td>{{ $admin->created_at->diffForHumans() }}</td>
-                                        <td>{{ $admin->created_at }}</td>
-                                        <td>
-                                            <a class="btn btn-warning"
-                                                href="{{ route('levels.edit', $admin->id) }}">{{ trans('dashboard.Edit') }}</a>
-                                            <button type="button" class="btn btn-danger" data-toggle="modal"
-                                                data-target="#deleteLevelModal">
-                                                {{ trans('dashboard.Delete') }}
-                                            </button>
-                                        </td>
+                            @foreach ($levels as $index => $level)
+                                <tr>
+                                    <td>{{ $index + 1 }}</td>
+                                    <td>{{ $level->name }}</td>
+                                    <td>{{ $level->description }}</td>
+                                    <td>{{ $level->created_at->diffForHumans() }}</td>
+                                    <td>{{ $level->created_at }}</td>
+                                    <td>
+                                        <a class="btn btn-warning"
+                                            href="{{ route('levels.edit', $level->id) }}">{{ trans('dashboard.Edit') }}</a>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal"
+                                            data-target="#deleteLevelModal">
+                                            {{ trans('dashboard.Delete') }}
+                                        </button>
+                                    </td>
 
 
 
-                                    </tr>
+                                </tr>
 
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="deleteLevelModal" tabindex="-1"
-                                        aria-labelledby="deleteLevelModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="deleteLevelModalLabel">
-                                                        {{ trans('dashboard.Delete Level') }}</h5>
-                                                    {{-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <!-- Modal -->
+                                <div class="modal fade" id="deleteLevelModal" tabindex="-1"
+                                    aria-labelledby="deleteLevelModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="deleteLevelModalLabel">
+                                                    {{ trans('dashboard.Delete Level') }}</h5>
+                                                {{-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button> --}}
-                                                </div>
-                                                <div class="modal-body">
-                                                    {{ trans('dashboard.Are you sure to perform this process') }}
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary"
-                                                        data-dismiss="modal">{{ trans('dashboard.Cancel') }}</button>
-                                                    <form style="display: inline-block"
-                                                        action="{{ route('levels.destroy', $admin->id) }}" method="post">
-                                                        @csrf
-                                                        @method('delete')
-                                                        <button type="submit"
-                                                            class="btn btn-danger">{{ trans('dashboard.Delete') }}</button>
-                                                    </form>
-                                                </div>
+                                            </div>
+                                            <div class="modal-body">
+                                                {{ trans('dashboard.Are you sure to perform this process') }}
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-dismiss="modal">{{ trans('dashboard.Cancel') }}</button>
+                                                <form style="display: inline-block"
+                                                    action="{{ route('levels.destroy', $level->id) }}" method="post">
+                                                    @csrf
+                                                    @method('delete')
+                                                    <button type="submit"
+                                                        class="btn btn-danger">{{ trans('dashboard.Delete') }}</button>
+                                                </form>
                                             </div>
                                         </div>
-                                        <!-- End Modal -->
-                                @endif
+                                    </div>
+                                    <!-- End Modal -->
                             @endforeach
                         </tbody>
                     </table>
