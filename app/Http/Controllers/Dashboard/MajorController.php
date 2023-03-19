@@ -9,14 +9,10 @@ use App\Models\Major;
 
 class MajorController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        //
+        $majors = Major::paginate(10);
+        return view("dashboard.majors.index", compact("majors"));
     }
 
     /**
@@ -26,7 +22,7 @@ class MajorController extends Controller
      */
     public function create()
     {
-        //
+        return view("dashboard.majors.create");
     }
 
     /**
@@ -37,7 +33,11 @@ class MajorController extends Controller
      */
     public function store(StoreMajorRequest $request)
     {
-        //
+        $data = $request->validated();
+
+        $major = Major::create($data);
+        notify()->success(trans("dashboard.Added Successfully"), trans("dashboard.Success"));
+        return redirect()->route("majors.index");
     }
 
     /**
@@ -48,7 +48,7 @@ class MajorController extends Controller
      */
     public function show(Major $major)
     {
-        //
+        abort(404);
     }
 
     /**
@@ -59,7 +59,7 @@ class MajorController extends Controller
      */
     public function edit(Major $major)
     {
-        //
+        return view("dashboard.majors.edit", compact("major"));
     }
 
     /**
@@ -71,7 +71,11 @@ class MajorController extends Controller
      */
     public function update(UpdateMajorRequest $request, Major $major)
     {
-        //
+        $data = $request->validated();
+        $major->update($data);
+
+        notify()->success(trans("dashboard.Updated Successfully"), trans("dashboard.Success"));
+        return redirect()->route("majors.index");
     }
 
     /**
@@ -82,6 +86,9 @@ class MajorController extends Controller
      */
     public function destroy(Major $major)
     {
-        //
+        $major->delete();
+
+        notify()->success(trans("dashboard.Deleted Successfully"), trans("dashboard.Success"));
+        return back();
     }
 }

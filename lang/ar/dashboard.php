@@ -106,7 +106,13 @@ return [
     "College Name" => "إسم الكلية",
     "Delete College" => "حذف كلية",
     "Edit College" => "تعديل كلية",
-    "Create College" => "إضافة كلية"
+    "Create College" => "إضافة كلية",
+    "Majors" => "التخصصات",
+    "Majors List" => "قائمة التخصصات",
+    "Major Name" => "إسم التخصص",
+    "Delete Major" => "حذف التخصص",
+    "Edit Major" => "تعديل التخصص",
+    "Create Major" => "إضافة تخصص"
 
 
 

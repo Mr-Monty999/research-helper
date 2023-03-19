@@ -104,6 +104,21 @@
                     <span>{{ trans('dashboard.Create Section') }}</span></a>
             </li>
 
+            {{-- Majors --}}
+            <div class="sidebar-heading">
+                {{ trans('dashboard.Majors') }}
+            </div>
+            <li class="nav-item {{ isRequestMatchUrl(route('majors.index'), 'active') }}">
+                <a class="nav-link" href="{{ route('majors.index') }}">
+                    {{-- <i class="fas fa-fw fa-cog"></i> --}}
+                    <span>{{ trans('dashboard.Majors List') }}</span></a>
+            </li>
+            <li class="nav-item {{ isRequestMatchUrl(route('majors.create'), 'active') }}">
+                <a class="nav-link" href="{{ route('majors.create') }}">
+                    {{-- <i class="fas fa-fw fa-cog"></i> --}}
+                    <span>{{ trans('dashboard.Create Major') }}</span></a>
+            </li>
+
             {{-- Admins --}}
             <div class="sidebar-heading">
                 {{ trans('dashboard.Admins') }}
@@ -449,7 +464,8 @@
                                     Activity Log
                                 </a> --}}
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="#" data-toggle="modal"
+                                    data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     {{ trans('dashboard.Logout') }}
                                 </a>

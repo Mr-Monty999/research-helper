@@ -107,7 +107,13 @@ return [
     "College Name" => "College Name",
     "Delete College" => "Delete College",
     "Edit College" => "Edit College",
-    "Create College" => "Create College"
+    "Create College" => "Create College",
+    "Majors" => "Majors",
+    "Majors List" => "Majors List",
+    "Major Name" => "Major Name",
+    "Delete Major" => "Delete Major",
+    "Edit Major" => "Edit Major",
+    "Create Major" => "Create Major"
 
 
 
