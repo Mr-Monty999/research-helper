@@ -101,7 +101,13 @@ return [
     "Section Name" => "Section Name",
     "Delete Section" => "Delete Section",
     "Edit Section" => "Edit Section",
-    "Create Section" => "Create Section"
+    "Create Section" => "Create Section",
+    "Colleges" => "Colleges",
+    "Colleges List" => "Colleges List",
+    "College Name" => "College Name",
+    "Delete College" => "Delete College",
+    "Edit College" => "Edit College",
+    "Create College" => "Create College"
 
 
 

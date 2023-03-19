@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Dashboard\AdminController;
+use App\Http\Controllers\Dashboard\CollegeController;
 use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\Dashboard\LevelController;
 use App\Http\Controllers\Dashboard\SectionController;
@@ -32,5 +33,8 @@ Route::group(["prefix" => "admin"], function () {
 
         /* Sections */
         Route::resource("sections", SectionController::class);
+
+        /* Colleges */
+        Route::resource("colleges", CollegeController::class);
     });
 });

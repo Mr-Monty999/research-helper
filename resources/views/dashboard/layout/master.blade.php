@@ -74,6 +74,20 @@
                     <span>{{ trans('dashboard.Create Level') }}</span></a>
             </li>
 
+            {{-- Colleges --}}
+            <div class="sidebar-heading">
+                {{ trans('dashboard.Colleges') }}
+            </div>
+            <li class="nav-item {{ isRequestMatchUrl(route('colleges.index'), 'active') }}">
+                <a class="nav-link" href="{{ route('colleges.index') }}">
+                    {{-- <i class="fas fa-fw fa-cog"></i> --}}
+                    <span>{{ trans('dashboard.Colleges List') }}</span></a>
+            </li>
+            <li class="nav-item {{ isRequestMatchUrl(route('colleges.create'), 'active') }}">
+                <a class="nav-link" href="{{ route('colleges.create') }}">
+                    {{-- <i class="fas fa-fw fa-cog"></i> --}}
+                    <span>{{ trans('dashboard.Create College') }}</span></a>
+            </li>
 
             {{-- Sections --}}
             <div class="sidebar-heading">

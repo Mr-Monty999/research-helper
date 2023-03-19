@@ -16,7 +16,8 @@ class CollegeController extends Controller
      */
     public function index()
     {
-        //
+        $colleges = College::paginate(10);
+        return view("dashboard.colleges.index", compact("colleges"));
     }
 
     /**
@@ -26,7 +27,7 @@ class CollegeController extends Controller
      */
     public function create()
     {
-        //
+        return view("dashboard.colleges.create");
     }
 
     /**
@@ -37,7 +38,11 @@ class CollegeController extends Controller
      */
     public function store(StoreCollegeRequest $request)
     {
-        //
+        $data = $request->validated();
+
+        $college = College::create($data);
+        notify()->success(trans("dashboard.Added Successfully"), trans("dashboard.Success"));
+        return redirect()->route("colleges.index");
     }
 
     /**
@@ -48,7 +53,7 @@ class CollegeController extends Controller
      */
     public function show(College $college)
     {
-        //
+        abort(404);
     }
 
     /**
@@ -59,7 +64,7 @@ class CollegeController extends Controller
      */
     public function edit(College $college)
     {
-        //
+        return view("dashboard.colleges.edit", compact("college"));
     }
 
     /**
@@ -71,7 +76,11 @@ class CollegeController extends Controller
      */
     public function update(UpdateCollegeRequest $request, College $college)
     {
-        //
+        $data = $request->validated();
+        $college->update($data);
+
+        notify()->success(trans("dashboard.Updated Successfully"), trans("dashboard.Success"));
+        return redirect()->route("colleges.index");
     }
 
     /**
@@ -82,6 +91,9 @@ class CollegeController extends Controller
      */
     public function destroy(College $college)
     {
-        //
+        $college->delete();
+
+        notify()->success(trans("dashboard.Deleted Successfully"), trans("dashboard.Success"));
+        return back();
     }
 }

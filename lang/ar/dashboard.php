@@ -100,7 +100,13 @@ return [
     "Section Name" => "إسم القسم",
     "Delete Section" => "حذف القسم",
     "Edit Section" => "تعديل القسم",
-    "Create Section" => "إضافة قسم"
+    "Create Section" => "إضافة قسم",
+    "Colleges" => "الكليات",
+    "Colleges List" => "قائمة الكليات",
+    "College Name" => "إسم الكلية",
+    "Delete College" => "حذف كلية",
+    "Edit College" => "تعديل كلية",
+    "Create College" => "إضافة كلية"
 
 
 
