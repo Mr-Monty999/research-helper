@@ -16,7 +16,8 @@ class LevelController extends Controller
      */
     public function index()
     {
-        //
+        $levels = Level::paginate(10);
+        return view("dashboard.levels.index", compact("levels"));
     }
 
     /**
@@ -26,7 +27,7 @@ class LevelController extends Controller
      */
     public function create()
     {
-        //
+        return view("dashboard.levels.create");
     }
 
     /**
@@ -37,7 +38,11 @@ class LevelController extends Controller
      */
     public function store(StoreLevelRequest $request)
     {
-        //
+        $data = $request->validated();
+
+        $level = Level::create($data);
+        notify()->success(trans("dashboard.Added Successfully"), trans("dashboard.Success"));
+        return redirect()->route("levels.index");
     }
 
     /**
@@ -48,7 +53,7 @@ class LevelController extends Controller
      */
     public function show(Level $level)
     {
-        //
+        abort(404);
     }
 
     /**
@@ -59,7 +64,7 @@ class LevelController extends Controller
      */
     public function edit(Level $level)
     {
-        //
+        return view("dashboard.levels.edit", compact("level"));
     }
 
     /**
@@ -71,7 +76,11 @@ class LevelController extends Controller
      */
     public function update(UpdateLevelRequest $request, Level $level)
     {
-        //
+        $data = $request->validated();
+        $level->update($data);
+
+        notify()->success(trans("dashboard.Updated Successfully"), trans("dashboard.Success"));
+        return redirect()->route("levels.index");
     }
 
     /**
@@ -82,6 +91,9 @@ class LevelController extends Controller
      */
     public function destroy(Level $level)
     {
-        //
+        $level->delete();
+
+        notify()->success(trans("dashboard.Deleted Successfully"), trans("dashboard.Success"));
+        return back();
     }
 }

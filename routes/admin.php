@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Dashboard\AdminController;
 use App\Http\Controllers\Dashboard\DashboardController;
+use App\Http\Controllers\Dashboard\LevelController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -24,6 +25,6 @@ Route::group(["prefix" => "admin"], function () {
         Route::get("/logout", [DashboardController::class, "logout"])->name("dashboard.logout");
 
         /* Levels */
-        Route::resource("levels", AdminController::class);
+        Route::resource("levels", LevelController::class);
     });
 });

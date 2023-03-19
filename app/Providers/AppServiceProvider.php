@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\Http\Livewire\Steps\CollegeStep;
 use App\Http\Livewire\Steps\EducationLevelStep;
 use App\Http\Livewire\WizardCheckoutComponent;
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
 use Livewire\Livewire;
 
@@ -30,5 +31,7 @@ class AppServiceProvider extends ServiceProvider
         Livewire::component("wizard-checkout-component", WizardCheckoutComponent::class);
         Livewire::component("education-level-step", EducationLevelStep::class);
         Livewire::component("college-step", CollegeStep::class);
+
+        Paginator::useBootstrapFive();
     }
 }

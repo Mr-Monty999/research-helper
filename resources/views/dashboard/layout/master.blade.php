@@ -59,6 +59,20 @@
             {{-- <hr class="sidebar-divider"> --}}
 
 
+            {{-- Levels --}}
+            <div class="sidebar-heading">
+                {{ trans('dashboard.Levels') }}
+            </div>
+            <li class="nav-item {{ isRequestMatchUrl(route('levels.index'), 'active') }}">
+                <a class="nav-link" href="{{ route('levels.index') }}">
+                    {{-- <i class="fas fa-fw fa-cog"></i> --}}
+                    <span>{{ trans('dashboard.Levels List') }}</span></a>
+            </li>
+            <li class="nav-item {{ isRequestMatchUrl(route('levels.create'), 'active') }}">
+                <a class="nav-link" href="{{ route('levels.create') }}">
+                    {{-- <i class="fas fa-fw fa-cog"></i> --}}
+                    <span>{{ trans('dashboard.Create Level') }}</span></a>
+            </li>
 
             {{-- Admins --}}
             <div class="sidebar-heading">

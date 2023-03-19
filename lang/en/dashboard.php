@@ -88,7 +88,16 @@ return [
     "Delete Admin" => "Delete Admin",
     "Update Admin" => "Update Admin",
     "volunteer" => "volunteer",
-    "Reseach Help Requests" => "Reseach Help Requests"
+    "Reseach Help Requests" => "Reseach Help Requests",
+    "Levels List" => "Levels List",
+    "Create Level" => "Create Level",
+    "Levels" => "Levels",
+    "Level Name" => "Level Name",
+    "Description" => "Description",
+    "Delete Level" => "Delete Level",
+    "Edit Level" => "Edit Level"
+
+
 
 
 

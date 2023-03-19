@@ -87,7 +87,17 @@ return [
     "Delete Admin" => "مسح مشرف",
     "Update Admin" => "تحديث المشرف",
     "volunteer" => "متبرع",
-    "Reseach Help Requests" => "عدد طلبات المساعدة في البحث"
+    "Reseach Help Requests" => "عدد طلبات المساعدة في البحث",
+    "Levels List" => "قائمة المراحل",
+    "Create Level" => "إضافة مرحلة",
+    "Levels" => "المراحل",
+    "Level Name" => "إسم المرحلة",
+    "Description" => "الوصف",
+    "Delete Level" => "حذف مرحلة",
+    "Edit Level" => "تعديل مرحلة"
+
+
+
 
 
 
