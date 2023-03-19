@@ -1,4 +1,4 @@
-@extends('dashboard.layout.main')
+@extends('dashboard.layout.master')
 @section('content')
     <div class="container">
         <form action="{{ route('admins.store') }}" method="post" enctype="multipart/form-data">

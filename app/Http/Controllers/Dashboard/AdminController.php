@@ -3,14 +3,14 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Dashboard\UpdateAdminRequest;
+use App\Http\Requests\UpdateAdminRequest;
 use App\Http\Requests\StoreAdminRequest;
 use App\Http\Requests\UpdateProfileRequest;
 use App\Models\Admin;
 use App\Models\User;
-use Auth;
 use Gate;
-use Hash;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
@@ -81,7 +81,7 @@ class AdminController extends Controller
      */
     public function store(StoreAdminRequest $request)
     {
-        $this->authorize("create", auth()->guard("admin")->user());
+        // $this->authorize("create", auth()->guard("admin")->user());
         $data = $request->validated();
 
         $data["password"] = Hash::make($data["password"]);
@@ -119,7 +119,7 @@ class AdminController extends Controller
      */
     public function edit(Admin $admin)
     {
-        $this->authorize("update", auth()->guard("admin")->user());
+        // $this->authorize("update", auth()->guard("admin")->user());
 
         return view("dashboard.admin.edit", compact("admin"));
     }
@@ -133,7 +133,7 @@ class AdminController extends Controller
      */
     public function update(UpdateAdminRequest $request, Admin $admin)
     {
-        $this->authorize("update", auth()->guard("admin")->user());
+        // $this->authorize("update", auth()->guard("admin")->user());
 
         $data = $request->validated();
         unset($data["password_confirmation"]);
@@ -162,7 +162,7 @@ class AdminController extends Controller
      */
     public function destroy(Admin $admin)
     {
-        $this->authorize("delete", auth()->guard("admin")->user());
+        // $this->authorize("delete", auth()->guard("admin")->user());
 
         $admin->delete();
 
