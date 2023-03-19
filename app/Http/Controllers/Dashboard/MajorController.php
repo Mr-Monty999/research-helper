@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Dashboard;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreMajorRequest;
 use App\Http\Requests\UpdateMajorRequest;
 use App\Models\Major;
