@@ -8,6 +8,12 @@ use Spatie\LivewireWizard\Components\StepComponent;
 
 class HelpTypeStep extends StepComponent
 {
+    public function nextStep()
+    {
+        for ($i = 0; $i < 4; $i++) {
+            $this->previousStep();
+        }
+    }
     public function render()
     {
         $helpTypes = HelpType::get();
