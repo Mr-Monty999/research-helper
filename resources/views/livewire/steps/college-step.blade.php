@@ -9,10 +9,10 @@
     <div class="row">
         <div class="container d-flex flex-column justify-content-center align-items-center">
             <div style="margin-top:15%;" class="col-5">
-                <button class="selection-btn mb-1">الإقتصاد</button>
-                <button class="selection-btn mb-1">القانون</button>
-                <button class="selection-btn mb-1">التربية</button>
-                <button class="selection-btn mb-1">التجارة</button>
+                @foreach ($colleges as $college)
+                    <button class="selection-btn mb-1">{{ $college->name }}</button>
+                @endforeach
+
             </div>
             {{--
         <div class="col-6 mb-4">

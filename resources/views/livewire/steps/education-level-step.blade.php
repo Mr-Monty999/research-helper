@@ -9,10 +9,9 @@
     <div class="row">
         <div class="container d-flex flex-column justify-content-center align-items-center">
             <div style="margin-top:15%;" class="col-5">
-                <button class="selection-btn mb-1">طالب بكلاريوس</button>
-                <button class="selection-btn mb-1">باحث ماجستير</button>
-                <button class="selection-btn mb-1">باحث دكتوراة</button>
-                <button class="selection-btn mb-1">بحوث ترقية</button>
+                @foreach ($levels as $level)
+                    <button class="selection-btn mb-1">{{ $level->name }}</button>
+                @endforeach
             </div>
         </div>
     </div>
