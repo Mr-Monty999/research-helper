@@ -16,7 +16,8 @@ class HelpTypeController extends Controller
      */
     public function index()
     {
-        //
+        $helpTypes = HelpType::paginate(10);
+        return view("dashboard.help-types.index", compact("helpTypes"));
     }
 
     /**
@@ -26,7 +27,7 @@ class HelpTypeController extends Controller
      */
     public function create()
     {
-        //
+        return view("dashboard.help-types.create");
     }
 
     /**
@@ -37,7 +38,11 @@ class HelpTypeController extends Controller
      */
     public function store(StoreHelpTypeRequest $request)
     {
-        //
+        $data = $request->validated();
+
+        $helpType = HelpType::create($data);
+        notify()->success(trans("dashboard.Added Successfully"), trans("dashboard.Success"));
+        return redirect()->route("help-types.index");
     }
 
     /**
@@ -48,7 +53,7 @@ class HelpTypeController extends Controller
      */
     public function show(HelpType $helpType)
     {
-        //
+        abort(404);
     }
 
     /**
@@ -59,7 +64,7 @@ class HelpTypeController extends Controller
      */
     public function edit(HelpType $helpType)
     {
-        //
+        return view("dashboard.help-types.edit", compact("helpType"));
     }
 
     /**
@@ -71,7 +76,11 @@ class HelpTypeController extends Controller
      */
     public function update(UpdateHelpTypeRequest $request, HelpType $helpType)
     {
-        //
+        $data = $request->validated();
+        $helpType->update($data);
+
+        notify()->success(trans("dashboard.Updated Successfully"), trans("dashboard.Success"));
+        return redirect()->route("help-types.index");
     }
 
     /**
@@ -82,6 +91,9 @@ class HelpTypeController extends Controller
      */
     public function destroy(HelpType $helpType)
     {
-        //
+        $helpType->delete();
+
+        notify()->success(trans("dashboard.Deleted Successfully"), trans("dashboard.Success"));
+        return back();
     }
 }

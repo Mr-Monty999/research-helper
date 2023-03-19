@@ -3,9 +3,11 @@
 use App\Http\Controllers\Dashboard\AdminController;
 use App\Http\Controllers\Dashboard\CollegeController;
 use App\Http\Controllers\Dashboard\DashboardController;
+use App\Http\Controllers\Dashboard\HelpTypeController;
 use App\Http\Controllers\Dashboard\LevelController;
 use App\Http\Controllers\Dashboard\MajorController;
 use App\Http\Controllers\Dashboard\SectionController;
+use App\Models\HelpType;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -30,8 +32,6 @@ Route::group(["prefix" => "admin"], function () {
         /* Levels */
         Route::resource("levels", LevelController::class);
 
-
-
         /* Sections */
         Route::resource("sections", SectionController::class);
 
@@ -40,5 +40,8 @@ Route::group(["prefix" => "admin"], function () {
 
         /* Majors */
         Route::resource("majors", MajorController::class);
+
+        /* Help Types */
+        Route::resource("help-types", HelpTypeController::class);
     });
 });

@@ -112,7 +112,13 @@ return [
     "Major Name" => "إسم التخصص",
     "Delete Major" => "حذف التخصص",
     "Edit Major" => "تعديل التخصص",
-    "Create Major" => "إضافة تخصص"
+    "Create Major" => "إضافة تخصص",
+    "Help Types" => "أنواع المساعدة",
+    "Help Types List" => "قائمة أنواع المساعدة",
+    "Help Type Name" => "إسم نوع المساعدة",
+    "Delete Help Type" => "حذف نوع المساعدة",
+    "Edit Help Type" => "تعديل نوع المساعدة",
+    "Create Help Type" => "إضافة نوع مساعدة"
 
 
 

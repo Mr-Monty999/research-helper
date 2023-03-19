@@ -119,6 +119,21 @@
                     <span>{{ trans('dashboard.Create Major') }}</span></a>
             </li>
 
+            {{-- Help Types --}}
+            <div class="sidebar-heading">
+                {{ trans('dashboard.Help Types') }}
+            </div>
+            <li class="nav-item {{ isRequestMatchUrl(route('help-types.index'), 'active') }}">
+                <a class="nav-link" href="{{ route('help-types.index') }}">
+                    {{-- <i class="fas fa-fw fa-cog"></i> --}}
+                    <span>{{ trans('dashboard.Help Types List') }}</span></a>
+            </li>
+            <li class="nav-item {{ isRequestMatchUrl(route('help-types.create'), 'active') }}">
+                <a class="nav-link" href="{{ route('help-types.create') }}">
+                    {{-- <i class="fas fa-fw fa-cog"></i> --}}
+                    <span>{{ trans('dashboard.Create Help Type') }}</span></a>
+            </li>
+
             {{-- Admins --}}
             <div class="sidebar-heading">
                 {{ trans('dashboard.Admins') }}

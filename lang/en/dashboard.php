@@ -113,7 +113,13 @@ return [
     "Major Name" => "Major Name",
     "Delete Major" => "Delete Major",
     "Edit Major" => "Edit Major",
-    "Create Major" => "Create Major"
+    "Create Major" => "Create Major",
+    "Help Types" => "Help Types",
+    "Help Types List" => "Help Types List",
+    "Help Type Name" => "Help Type Name",
+    "Delete Help Type" => "Delete Help Type",
+    "Edit Help Type" => "Edit Help Type",
+    "Create Help Type" => "Create Help Type"
 
 
 
