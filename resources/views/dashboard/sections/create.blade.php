@@ -11,14 +11,12 @@
             <br>
             <div class="row">
                 <div class="mb-3 col-12">
-                    <label for="name" class="form-label">{{ trans('dashboard.Name') }}</label>
-                    <input value="{{ old('name') }}" name="name" type="text" class="form-control" id="name"
-                        placeholder="{{ trans('dashboard.Name') }}">
+                    <label for="name" class="form-label">{{ trans('dashboard.Section Name') }}</label>
+                    <input value="{{ old('name') }}" name="name" type="text" class="form-control" id="name">
                 </div>
                 <div class="mb-3 col-12">
-                    <label for="description" class="form-label">{{ trans('dashboard.Email') }}</label>
-                    <input value="{{ old('description') }}" name="description" type="description" class="form-control"
-                        id="description" placeholder="{{ trans('dashboard.Description') }}">
+                    <label for="description" class="form-label">{{ trans('dashboard.Description') }}</label>
+                    <textarea name="description" class="form-control" id="" cols="30" rows="5">{{ old('description') }}</textarea>
                 </div>
 
             </div>

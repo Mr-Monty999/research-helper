@@ -16,7 +16,8 @@ class SectionController extends Controller
      */
     public function index()
     {
-        //
+        $sections = Section::paginate(10);
+        return view("dashboard.sections.index", compact("sections"));
     }
 
     /**
@@ -26,7 +27,7 @@ class SectionController extends Controller
      */
     public function create()
     {
-        //
+        return view("dashboard.sections.create");
     }
 
     /**
@@ -37,7 +38,11 @@ class SectionController extends Controller
      */
     public function store(StoreSectionRequest $request)
     {
-        //
+        $data = $request->all();
+
+        $section = Section::create($data);
+        notify()->success(trans("dashboard.Added Successfully"), trans("dashboard.Success"));
+        return redirect()->route("sections.index");
     }
 
     /**
@@ -48,7 +53,7 @@ class SectionController extends Controller
      */
     public function show(Section $section)
     {
-        //
+        abort(404);
     }
 
     /**
@@ -59,7 +64,7 @@ class SectionController extends Controller
      */
     public function edit(Section $section)
     {
-        //
+        return view("dashboard.sections.edit", compact("section"));
     }
 
     /**
@@ -71,7 +76,11 @@ class SectionController extends Controller
      */
     public function update(UpdateSectionRequest $request, Section $section)
     {
-        //
+        $data = $request->validated();
+
+        $section->update($data);
+        notify()->success(trans("dashboard.Updated Successfully"), trans("dashboard.Success"));
+        return redirect()->route("sections.index");
     }
 
     /**
@@ -82,6 +91,8 @@ class SectionController extends Controller
      */
     public function destroy(Section $section)
     {
-        //
+        $section->delete();
+        notify()->success(trans("dashboard.Deleted Successfully"), trans("dashboard.Success"));
+        return back();
     }
 }

@@ -95,7 +95,14 @@ return [
     "Level Name" => "Level Name",
     "Description" => "Description",
     "Delete Level" => "Delete Level",
-    "Edit Level" => "Edit Level"
+    "Edit Level" => "Edit Level",
+    "Sections" => "Sections",
+    "Sections List" => "Sections List",
+    "Section Name" => "Section Name",
+    "Delete Section" => "Delete Section",
+    "Edit Section" => "Edit Section",
+    "Create Section" => "Create Section"
+
 
 
 

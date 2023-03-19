@@ -74,6 +74,22 @@
                     <span>{{ trans('dashboard.Create Level') }}</span></a>
             </li>
 
+
+            {{-- Sections --}}
+            <div class="sidebar-heading">
+                {{ trans('dashboard.Sections') }}
+            </div>
+            <li class="nav-item {{ isRequestMatchUrl(route('sections.index'), 'active') }}">
+                <a class="nav-link" href="{{ route('sections.index') }}">
+                    {{-- <i class="fas fa-fw fa-cog"></i> --}}
+                    <span>{{ trans('dashboard.Sections List') }}</span></a>
+            </li>
+            <li class="nav-item {{ isRequestMatchUrl(route('sections.create'), 'active') }}">
+                <a class="nav-link" href="{{ route('sections.create') }}">
+                    {{-- <i class="fas fa-fw fa-cog"></i> --}}
+                    <span>{{ trans('dashboard.Create Section') }}</span></a>
+            </li>
+
             {{-- Admins --}}
             <div class="sidebar-heading">
                 {{ trans('dashboard.Admins') }}

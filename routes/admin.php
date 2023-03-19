@@ -3,6 +3,7 @@
 use App\Http\Controllers\Dashboard\AdminController;
 use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\Dashboard\LevelController;
+use App\Http\Controllers\Dashboard\SectionController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -26,5 +27,10 @@ Route::group(["prefix" => "admin"], function () {
 
         /* Levels */
         Route::resource("levels", LevelController::class);
+
+
+
+        /* Sections */
+        Route::resource("sections", SectionController::class);
     });
 });

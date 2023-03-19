@@ -94,7 +94,14 @@ return [
     "Level Name" => "إسم المرحلة",
     "Description" => "الوصف",
     "Delete Level" => "حذف مرحلة",
-    "Edit Level" => "تعديل مرحلة"
+    "Edit Level" => "تعديل مرحلة",
+    "Sections" => "الأقسام",
+    "Sections List" => "قائمة الأقسام",
+    "Section Name" => "إسم القسم",
+    "Delete Section" => "حذف القسم",
+    "Edit Section" => "تعديل القسم",
+    "Create Section" => "إضافة قسم"
+
 
 
 
