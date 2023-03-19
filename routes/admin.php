@@ -16,10 +16,14 @@ Route::group(["prefix" => "admin"], function () {
     Route::group(["middleware" => "auth:admin"], function () {
         Route::get("/", [DashboardController::class, "index"])->name("dashboard.index");
 
+        //** Admins  */
         Route::get("/profile", [AdminController::class, "profile"])->name("admins.profile.index");
         Route::put("/profile", [AdminController::class, "updateProfile"])->name("admins.profile.update");
         Route::resource("admins", AdminController::class);
 
         Route::get("/logout", [DashboardController::class, "logout"])->name("dashboard.logout");
+
+        /* Levels */
+        Route::resource("levels", AdminController::class);
     });
 });
