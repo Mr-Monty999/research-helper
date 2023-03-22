@@ -1,4 +1,6 @@
 <div>
+    @include('livewire.loading-spinner')
+
     <div class="sidebar position-fixed d-flex flex-column">
         <button class="btn sidebar-btn mb-1">المرحلة</button>
         <button class="btn sidebar-btn mb-1">الكلية</button>
