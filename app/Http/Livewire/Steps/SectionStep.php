@@ -8,6 +8,11 @@ use Spatie\LivewireWizard\Components\StepComponent;
 
 class SectionStep extends StepComponent
 {
+
+    public function addToSession($value)
+    {
+        session()->put("section", $value);
+    }
     public function render()
     {
 

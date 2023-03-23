@@ -1,4 +1,4 @@
-    <div class="spinner" wire:loading.flex>
+    {{-- <div class="spinner" wire:loading.flex>
         <span class="loader"></span>
     </div>
 
@@ -37,7 +37,7 @@
             height: 56px;
             border-radius: 50%;
             border: 3px solid transparent;
-            border-bottom-color: #FF3D00;
+            border-bottom-color: rgb(0, 204, 255);
         }
 
         @keyframes rotation {
@@ -49,4 +49,4 @@
                 transform: rotate(360deg);
             }
         }
-    </style>
+    </style> --}}

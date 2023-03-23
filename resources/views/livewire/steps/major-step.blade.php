@@ -12,7 +12,9 @@
         <div class="container d-flex flex-column justify-content-center align-items-center">
             <div style="margin-top:15%;" class="col-5">
                 @foreach ($majors as $major)
-                    <button class="selection-btn mb-1">{{ $major->name }}</button>
+                    <button wire:ignore.self wire:click="addToSession('{{ $major->name }}')"
+                        class="selection-btn mb-1 select-option"
+                        onclick="$('button').removeClass('bg-black');this.classList.add('bg-black');">{{ $major->name }}</button>
                 @endforeach
 
             </div>

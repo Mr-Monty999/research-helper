@@ -8,6 +8,11 @@ use Spatie\LivewireWizard\Components\StepComponent;
 
 class MajorStep extends StepComponent
 {
+
+    public function addToSession($value)
+    {
+        session()->put("major", $value);
+    }
     public function render()
     {
         $majors = Major::get();

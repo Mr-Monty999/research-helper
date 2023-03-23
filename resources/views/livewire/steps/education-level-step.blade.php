@@ -11,10 +11,13 @@
         <div class="container d-flex flex-column justify-content-center align-items-center">
             <div style="margin-top:15%;" class="col-5">
                 @foreach ($levels as $level)
-                    <button class="selection-btn mb-1">{{ $level->name }}</button>
+                    <button wire:ignore.self wire:click="addToSession('{{ $level->name }}')"
+                        class="selection-btn mb-1 select-option"
+                        onclick="$('button').removeClass('bg-black');this.classList.add('bg-black');">{{ $level->name }}</button>
                 @endforeach
             </div>
         </div>
+
     </div>
     <nav class="navbar navbar-expand fixed-bottom py-3" id="mainNav">
         <div class="container-fluid px-4 px-lg-5">

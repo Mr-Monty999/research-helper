@@ -8,6 +8,10 @@ use Spatie\LivewireWizard\Components\StepComponent;
 
 class CollegeStep extends StepComponent
 {
+    public function addToSession($value)
+    {
+        session()->put("college", $value);
+    }
     public function render()
     {
         $colleges = College::get();

@@ -8,11 +8,15 @@ use Spatie\LivewireWizard\Components\StepComponent;
 
 class HelpTypeStep extends StepComponent
 {
+    public function addToSession($value)
+    {
+        session()->put("help_type", $value);
+        dd(session()->all());
+    }
     public function nextStep()
     {
-        for ($i = 0; $i < 4; $i++) {
-            $this->previousStep();
-        }
+
+        redirect()->to("https://www.google.com");
     }
     public function render()
     {
