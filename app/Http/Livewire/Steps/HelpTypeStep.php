@@ -10,8 +10,7 @@ class HelpTypeStep extends StepComponent
 {
     public function addToSession($value)
     {
-        session()->put("help_type", $value);
-        dd(session()->all());
+        session()->put("helpType", $value);
     }
     public function nextStep()
     {
