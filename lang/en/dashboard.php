@@ -126,7 +126,10 @@ return [
     "Please Choose Your College" => "Please Choose Your College",
     "Please Choose Your Major" => "Please Choose Your Major",
     "Please Choose Your Section" => "Please Choose Your Section",
-    "Please Choose Your Type Help" => "Please Choose Your Type Help"
+    "Please Choose Your Type Help" => "Please Choose Your Type Help",
+    "Settings" => "Settings",
+    "Edit Settings" => "Edit Settings"
+
 
 
 

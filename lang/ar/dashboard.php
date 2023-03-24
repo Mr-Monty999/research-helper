@@ -125,7 +125,10 @@ return [
     "Please Choose Your College" => "الرجاء إختيار الكلية !",
     "Please Choose Your Major" => "الرجاء إختيار التخصص !",
     "Please Choose Your Section" => "الرجاء إختيار القسم !",
-    "Please Choose Your Type Help" => "الرجاء إختيار نوع المساعدة"
+    "Please Choose Your Type Help" => "الرجاء إختيار نوع المساعدة",
+    "Settings" => "الإعدادت",
+    "Edit Settings" => "تعديل الإعدادت"
+
 
 
 

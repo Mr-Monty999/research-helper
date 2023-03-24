@@ -149,6 +149,18 @@
                     <span>{{ trans('dashboard.Create Admin') }}</span></a>
             </li>
 
+
+            {{-- Settings --}}
+            <div class="sidebar-heading">
+                {{ trans('dashboard.Settings') }}
+            </div>
+            <li class="nav-item {{ isRequestMatchUrl(route('settings.index'), 'active') }}">
+                <a class="nav-link" href="{{ route('settings.index') }}">
+                    {{-- <i class="fas fa-fw fa-cog"></i> --}}
+                    <span>{{ trans('dashboard.Edit Settings') }}</span></a>
+            </li>
+
+
             <!-- Nav Item - Pages Collapse Menu -->
 
             {{-- <li class="nav-item">
