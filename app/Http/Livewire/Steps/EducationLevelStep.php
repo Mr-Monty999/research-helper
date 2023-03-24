@@ -14,6 +14,17 @@ class EducationLevelStep extends StepComponent
     {
         session()->put("level", $value);
     }
+    public function next()
+    {
+
+        if (session()->has("level"))
+            $this->nextStep();
+        else
+            $this->dispatchBrowserEvent(
+                'alert',
+                ['type' => 'error',  'message' => trans("dashboard.Please Choose Your Level")]
+            );
+    }
     public function render()
     {
         $levels = Level::get();

@@ -13,6 +13,17 @@ class MajorStep extends StepComponent
     {
         session()->put("major", $value);
     }
+    public function next()
+    {
+
+        if (session()->has("major"))
+            $this->nextStep();
+        else
+            $this->dispatchBrowserEvent(
+                'alert',
+                ['type' => 'error',  'message' => trans("dashboard.Please Choose Your Major")]
+            );
+    }
     public function render()
     {
         $majors = Major::get();

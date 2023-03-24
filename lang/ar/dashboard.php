@@ -118,7 +118,15 @@ return [
     "Help Type Name" => "إسم نوع المساعدة",
     "Delete Help Type" => "حذف نوع المساعدة",
     "Edit Help Type" => "تعديل نوع المساعدة",
-    "Create Help Type" => "إضافة نوع مساعدة"
+    "Create Help Type" => "إضافة نوع مساعدة",
+    "Site Setttings" => "إعدادات الموقع",
+    "Whatsapp Phone" => "رقم هاتف الواتساب",
+    "Please Choose Your Level" => "الرجاء إختيار المرحلة !",
+    "Please Choose Your College" => "الرجاء إختيار الكلية !",
+    "Please Choose Your Major" => "الرجاء إختيار التخصص !",
+    "Please Choose Your Section" => "الرجاء إختيار القسم !",
+    "Please Choose Your Type Help" => "الرجاء إختيار نوع المساعدة"
+
 
 
 

@@ -12,6 +12,17 @@ class CollegeStep extends StepComponent
     {
         session()->put("college", $value);
     }
+    public function next()
+    {
+
+        if (session()->has("college"))
+            $this->nextStep();
+        else
+            $this->dispatchBrowserEvent(
+                'alert',
+                ['type' => 'error',  'message' => trans("dashboard.Please Choose Your College")]
+            );
+    }
     public function render()
     {
         $colleges = College::get();

@@ -13,6 +13,17 @@ class SectionStep extends StepComponent
     {
         session()->put("section", $value);
     }
+    public function next()
+    {
+
+        if (session()->has("section"))
+            $this->nextStep();
+        else
+            $this->dispatchBrowserEvent(
+                'alert',
+                ['type' => 'error',  'message' => trans("dashboard.Please Choose Your Section")]
+            );
+    }
     public function render()
     {
 

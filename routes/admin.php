@@ -7,6 +7,7 @@ use App\Http\Controllers\Dashboard\HelpTypeController;
 use App\Http\Controllers\Dashboard\LevelController;
 use App\Http\Controllers\Dashboard\MajorController;
 use App\Http\Controllers\Dashboard\SectionController;
+use App\Http\Controllers\Dashboard\SettingController;
 use App\Models\HelpType;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
@@ -43,5 +44,9 @@ Route::group(["prefix" => "admin"], function () {
 
         /* Help Types */
         Route::resource("help-types", HelpTypeController::class);
+
+        /* Settings */
+        Route::get("settings", [SettingController::class, "index"])->name("settings.index");
+        Route::put("settings/save", [SettingController::class, "update"])->name("settings.update");
     });
 });

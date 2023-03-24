@@ -26,6 +26,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap"
         rel="stylesheet">
     <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
     @livewireStyles
 </head>
 
@@ -58,6 +59,24 @@
     <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script>
+        window.addEventListener('alert', event => {
+
+            toastr[event.detail.type](event.detail.message,
+
+                event.detail.title ?? ''), toastr.options = {
+
+                "closeButton": true,
+
+                "progressBar": true,
+
+            }
+
+        });
+    </script>
+
+
 
     @livewireScripts
 

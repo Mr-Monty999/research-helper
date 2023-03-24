@@ -119,7 +119,18 @@ return [
     "Help Type Name" => "Help Type Name",
     "Delete Help Type" => "Delete Help Type",
     "Edit Help Type" => "Edit Help Type",
-    "Create Help Type" => "Create Help Type"
+    "Create Help Type" => "Create Help Type",
+    "Site Setttings" => "Site Settings",
+    "Whatsapp Phone" => "Whatsapp Phone",
+    "Please Choose Your Level" => "Please Your Choose Level",
+    "Please Choose Your College" => "Please Choose Your College",
+    "Please Choose Your Major" => "Please Choose Your Major",
+    "Please Choose Your Section" => "Please Choose Your Section",
+    "Please Choose Your Type Help" => "Please Choose Your Type Help"
+
+
+
+
 
 
 
