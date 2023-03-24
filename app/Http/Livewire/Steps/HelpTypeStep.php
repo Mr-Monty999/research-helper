@@ -14,8 +14,14 @@ class HelpTypeStep extends StepComponent
     }
     public function nextStep()
     {
-
-        redirect()->to("https://www.google.com");
+        $data[] = "السلام عليكم أنا أدرس في المرحلة : " . session()->get("level");
+        $data[] = "الكلية : " . session()->get("college");
+        $data[] = "القسم : " . session()->get("section");
+        $data[] = "التخصص : " . session()->get("major");
+        $data[] = "نوع المساعدة : " . session()->get("helpType");
+        $data = implode("%0A", $data);
+        $link = "https://wa.me/+966530007074?text=$data";
+        redirect()->to($link);
     }
     public function render()
     {
